@@ -8,6 +8,9 @@ La keypoint detection può essere utilizzata, ad esempio, per estrarre le featur
 Una Convolutional Neural Network è una rete neurale artificiale con l'abilità di riconoscere pattern (feature) all'interno di immagini, ed è quindi utilizzata per l'identificazione degli elementi in esse contenuti.
 I layer interni (hidden layers) sono convolutional layer e ognuno di essi ha filtri specifici, progettati appositamente per estrarre una determinata feature dall'immagine. I primi layer avranno filtri che puntano a estrarre elementi semplici (bordi, spigoli), mentre andando avanti si arriverà, ad esempio, a ricercare un cane all'interno della figura.
 
+Al giorno d'oggi, l'object detection consiste nel labeling e nella segmentazione di ogni singolo pixel all'interno dell'immagine - questa procedura è detta panoptic segmentation e richiede un grosso lavoro da parte della CNN per poter avere successo, data la mole di feature (da estrarre) necessaria.
+Detectron2 è un'evoluzione lineare di Detectron e fornisce un ambiente personalizzabile per qualsiasi tipo di object detection.
+
 POSSIBILI APPROFONDIMENTI (da sistemare):
 Opzioni per generare dati sintetici:
 - SMOTE (Synthetic Minority Over-sampling TEchnique): utile in problemi di classificazione con dataset "imbalanced" (es. un dataset con sole due classi in cui una classe è significativamente più popolata dell'altra), che non rendono possibile un machine learning di qualità. Prende un dato dalla classe meno popolata, ne osserva la neighbourhood possibile e la va a popolare con dati sintetici. Lo SMOTE% indica quante istanze si vanno a generare per ogni istanza della classe minoritaria (es. 600% = 6 istanze generate per 1 istanza presente => da n istanze di partenza ho 7n istanze di arrivo).
