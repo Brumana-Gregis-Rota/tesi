@@ -1,0 +1,1 @@
+Installato Python 3.8 (https://www.python.org/), TensorFlow 2.2 (https://github.com/tensorflow/tensorflow)e relativi driver video, toolkit CUDA 10.1 e SDK CuDNN 7.6.5 per CUDA 10.1 (https://www.tensorflow.org/install/gpu) e OpenCV3, necessari per seguire il lavoro di Ortega (https://medium.com/@apofeniaco/training-a-hand-detector-like-the-openpose-one-in-tensorflow-45c5177d6679).
