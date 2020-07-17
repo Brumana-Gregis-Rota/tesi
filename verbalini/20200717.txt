@@ -1,1 +1,1 @@
-Installazione progetto Ortega ma problemi, allora ri-installazione OpenCV3 e installazione protoc e protobuf. Problemi risolti con molte difficoltà: si è dovuto girare intorno ai requirements cancellando pycocotools che non si riusciva ad installare.
+Installazione progetto Ortega ma problemi, allora ri-installazione OpenCV3 e installazione protoc e protobuf, con python3-tk già presente. Problemi risolti con molte difficoltà: si è dovuto girare intorno ai requirements cancellando pycocotools che non si riusciva ad installare.
