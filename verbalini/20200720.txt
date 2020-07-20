@@ -1,0 +1,1 @@
+Training rete neurale, previa conversione con tf_upgrade_v2 a versione tf nuvova
