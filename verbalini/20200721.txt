@@ -1,0 +1,15 @@
+Approccio bottom-up su nuovo pc:
+- clonazione git hand_detector_train;
+- python3 installato;
+- installazione requirements senza pycocotools, installato a parte e che ha richiesto build tools c++ e cython;
+- dataset estratto;
+- vgg16 aggiunto;
+- partenza training:
+	- manca modulo cv2 => opencv-python installato [ATTENZIONE, è il 4];
+	- manca modulo tensorflow => tensorflow installato;
+		- manca parte GPU tensorflow => ultimo driver, CUDA 10.1.2, cuDNN;
+	- problema "No module named 'tensorflow.contrib'" =>
+								convertito con tf_upgrade_v2 e lavoro su hand_detector_train_2.0;
+								installato tf_slim e sostituito codice in network_base.py;
+	- problema "tf.placeholder() is not compatible with eager execution" => tf.compat.v1.disable_eager_execution() aggiunto a train.py;
+	- problema "__init__() got an unexpected keyword argument 'nr_thread'" => ?????;
