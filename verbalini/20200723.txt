@@ -1,0 +1,28 @@
+Cerchiamo di risolvere il problema utilizzando una macchina virtuale Linux (Ubuntu)
+Installiamo vmware (https://my.vmware.com/en/web/vmware/downloads/info/slug/desktop_end_user_computing/vmware_workstation_player/15_0)
+Scarichiamo Ubuntu dal sito (https://ubuntu.com/download/desktop/thank-you?version=20.04&architecture=amd64)
+Apriamo vmware e installiamo Ubuntu appena scaricato.
+Abbiamo installato gli aggiornamenti.
+Per prima cosa installiamo git dalla linea di comando tramite il comando
+-"sudo apt install git-all"
+Poi : 
+-"git clone https://github.com/ortegatron/hand_detector_train.git"
+Non abbiamo bisogno di installare python in quanto abbiamo scoperto che è già installato su Ubuntu con la versione Python 3.8.2.
+Entriamo nella cartella hand_detector_train:
+-"cd hand_detector_train"
+Poi eseguiamo il comando: 
+-"sudo apt install python3-pip"
+Poi:
+-"pip3 install -r requirements.txt"
+Scarichiamo dalla pagina di Ortegatron (https://github.com/ortegatron/hand_detector_train) i file :
+-"http://www.mediafire.com/file/7e73ddj31rzw6qq/openpose_vgg16.npy"
+-" Hands from Synthetic Data Dataset".
+Abbiamo aggiunto il path, inoltre abbiamo aggiunto vgg16 e poi abbiamo estratto il dataset.
+Abbiamo provato il train (python3 train.py --datapath=../hand_labels_synth), ma ci
+mancava cv2. Quindi abbiamo provato ad importarlo tramite il comando:
+-"sudo apt-get install python-opencv" 
+ma da errore (E: Unable to locate package python-opencv)
+Così abbiamo utilizzato il comando:
+-"pip3 install opencv-python".
+Abbiamo poi installato Tensorflow(versione 2.2.0) tramite il comando:
+-"pip3 install tensorflow"
