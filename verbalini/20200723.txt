@@ -26,3 +26,17 @@ Così abbiamo utilizzato il comando:
 -"pip3 install opencv-python".
 Abbiamo poi installato Tensorflow(versione 2.2.0) tramite il comando:
 -"pip3 install tensorflow"
+Errore tensorflow.contrib.slim, installiamo tf_slim con
+- "pip3 install tf_slim"
+e cambiamo in network_base.py la linea che dava problemi con
+- "import tf_slim as slim"
+C'erano problemi di compatibilità con TF2, quindi abbiamo provato l'upgrade con tf_upgrade_v2.
+Ci sono ancora problemi, quindi aggiungiamo a train.py la linea tf.compat.v1.disable_eager_execution()
+
+Ripetiamo i passaggi su una nuova macchina virtuale, installando tuttavia TF1 di modo da evitare la parte di conversione, sperando i problemi siano legati ad essa.
+Per installare TF 1.15, è stato necessario disinstallare la versione di Python 3.8.2 pre-installata su Ubuntu e installare la versione 3 => Questo ha rotto Ubuntu e si è dovuta cambiare versione
+
+Ricominciamo su un'altra macchina virtuale e installiamo Anaconda, creando un environment con "conda create -n tesi python=3.7" che ci permetta di utilizzare Python3.7, che supporta versioni 1.x di TensorFlow.
+Questo environment verrà attivato col comando "conda activate tesi". Non è stato necessario installare pip3 e i requirements vengono installati agevolmente.
+Anche TF1.15 (ultimo 1.x) viene installato agevolmente. Senza Anaconda non sarebbe stato possibile.
+Installiamo pip3 install opencv-python per il solito discorso cv2.
