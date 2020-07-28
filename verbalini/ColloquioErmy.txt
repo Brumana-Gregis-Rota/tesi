@@ -1,3 +1,4 @@
+Per quanto riguarda titolo e abstract della tesi, si decideranno quando la scadenza si avvicinerà di modo da essere sicuri di laurearsi a settembre.
 Utilizzare googlecolab per vedere se va che ha già alcuni ambienti preinstallati.
 Collegalo al Drive per avere più spazio.
 Prima cosa da provare è:
@@ -12,6 +13,5 @@ e quindi rende il training più veloce.
 Descrivere più nel dettaglio come deve essere per esempio il dataset in ingresso in modo
 che quando andremo a creare il dataset sintetico sappiamo come andarlo a generare.
 (Parte meno operativa e più descrittiva).
-A noi interessa di più partire dalla keypoint quindi come è strutturato il dataset, poi si 
-prende un modello 3d, ci appiccichiamo i keipoint e poi inseriamo il dataset sintetico.
+A noi interessa di più partire dalla keypoint detection quindi dove posizionarli sugli oggetti: partendo da un modello 3D dell'oggetto, ci appiccichiamo i keipoint e poi si genera il dataset sintetico.
 Obiettivo:keypoint detection, quindi identificare punti.
