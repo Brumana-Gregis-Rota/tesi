@@ -1,0 +1,17 @@
+Utilizzare googlecolab per vedere se va che ha già alcuni ambienti preinstallati.
+Collegalo al Drive per avere più spazio.
+Prima cosa da provare è:
+stessa cosa fatta precedentemente ma in googlecolab, perchè ha già preinstallato tutto il materiale
+e quindi potrebbe velocizzare tutto.
+Impostare Tensorflow1 perchè automaticamente lui carica il 2.
+Per accedere ai comandi linux si mette ! davanti al comando (es:!pip install...).
+Se funziona potremmo usarlo come macchina virtuale.
+Non c'è bisogno di commentare errori.
+Su googlecolab viene messa a disposizione una GPU senza bisogno di installarla
+e quindi rende il training più veloce.
+Descrivere più nel dettaglio come deve essere per esempio il dataset in ingresso in modo
+che quando andremo a creare il dataset sintetico sappiamo come andarlo a generare.
+(Parte meno operativa e più descrittiva).
+A noi interessa di più partire dalla keypoint quindi come è strutturato il dataset, poi si 
+prende un modello 3d, ci appiccichiamo i keipoint e poi inseriamo il dataset sintetico.
+Obiettivo:keypoint detection, quindi identificare punti.
