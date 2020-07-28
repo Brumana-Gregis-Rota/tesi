@@ -1,0 +1,47 @@
+Dopo esserci confrontati con Ermidoro è emerso che conviene provare a utilizzare
+Google Colab che ha già molti dei programmi di nostro interesse pre-installati.
+Abbiamo creato un nuovo blocco note all'interno di Google Colab con la linea di codice
+"!git clone ! git clone https://github.com/ortegatron/hand_detector_train.git" per andare
+ a clonare il nostro git.
+A questo punto eseguiamo il comando "! pip3 install -r hand_detector_train/requirements.txt"
+Questi comandi sono stati presi dalla pagina web "https://github.com/ortegatron/hand_detector_train"
+dal paragrafo "Install".
+Una volta eseguito il comando è necessario effetturare il restart, quindi clicchiamo
+su "restart runtime" e poi "yes". A questo punto carichiamo in Google Colab la cartella 
+compressa "hand_labels_synth" tramite il pulsante sulla sinistra che rappresenta
+una cartella.
+Nel frattempo che aspettiamo scarichiamo il file "openpose_vgg16" dal link 
+"http://www.mediafire.com/file/7e73ddj31rzw6qq/openpose_vgg16.npy/file" e lo carichiamo
+nella cartella "hand_detector_train/models/numpy".
+Ci siamo accorti che il caricamento in Google Colab dava alcuni problemi, così 
+abbiamo deciso di caricare la cartella su Google Drive e poi collegarlo a
+Colab tramite il tasto "monta drive".
+Una volta cliccato il tasto "monta drive" ci appare sulla linea di comando di
+Google Colab il comando 
+"from google.colab import drive
+drive.mount('\content\drive)"
+Eseguendo il comando ci viene fornito un link, all'interno del quale
+ci viene dato un codice che serve come codice di autorizzazione per
+connettere Google Drive a Colab.
+A questo punto decomprimiamo la cartella "hand_labels_synth" caricata precedentemente
+tramite il comando "!unzip drive/MyDrive/hand_labels_synth.zip".
+Una volta terminata questa operazione ci spostiamo nella cartella "hand_detector_train"
+e proviamo il training con il comando "python3 train.py --datapath==../drive/My\ Drive/hand_labels_synth"
+ma ci accorgiamo che manca Tensorflow.
+Quindi proviamo a installare la versione 1.15 tramite il comando "%tensorflow_version 1.15"
+e poi riproviamo il training sempre con lo stesso comando precedente, ma anche
+sta volta abbiamo un errore:
+
+"[0728 15:09:25 @parallel.py:219] [MultiProcessRunner] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    df = get_dataflow_batch(args.datapath, True, args.batchsize)
+  File "/content/hand_detector_train/hands_dataset.py", line 74, in get_dataflow_batch
+    ds = BatchData(ds, batchsize)
+  File "/usr/local/lib/python3.6/dist-packages/tensorpack/dataflow/common.py", line 98, in __init__
+    assert batch_size <= len(ds)
+AssertionError"
+
+
+
+
