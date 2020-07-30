@@ -1,0 +1,4 @@
+Dato che il tentativo di implementazione del progetto di Ortega su github non ha avuto successo, viene cambiato il percorso di tesi in corso d'opera e si opta per l'implementazione di quanto presente nel video https://www.youtube.com/watch?v=lHXcYhyhHGA&t=603s adattato a due modelli di mani (https://www.cgtrader.com/free-3d-models/character/anatomy/man-hand, https://www.cgtrader.com/free-3d-models/character/man/fps-arms-pack).
+
+Si parte con l'installazione di Anaconda3 (https://repo.anaconda.com/archive/Anaconda3-2020.07-Windows-x86_64.exe), aggiungendola al PATH durante l'installazione e si crea un environment basato su Python 3.5, come indicato nel video, col comando conda create -n tesi python=3.5.
+Si attiva l'environment con il comando conda activate tesi.
