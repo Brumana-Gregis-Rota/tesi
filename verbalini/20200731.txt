@@ -3,5 +3,6 @@ da problemi con l'installazione di torch). Per risolvere il problema relativo a 
 "conda install pytorch torchvision cudatoolkit=10.0 -c pytorch".
 A questo punto abbiamo installato "Nets" tramite il comando "pip install nets". 
 Ora proviamo nuovamente il testing con il comando "python object_detection/builders/model_builder_test.py", e non abbiamo più l'errore relativo a nets ma è cambiato
-in SyntaxError ( requires_grad = "" if not self.requires_grad else f", requires_grad={self.requires_grad}").
+in SyntaxError.
+Abbiamo utilizzato il comando "SET PYTHONPATH=%cd%;%cd%\slim" e sembra che funzioni.
 
