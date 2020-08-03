@@ -1,8 +1,5 @@
-Installati CUDA 10.0 e CuDNN 7.6.5, Tensorflow si apre riconoscendo il supporto gpu ma richiede pip install scipy, pip install nets (che durante l'installazione 
-da problemi con l'installazione di torch). Per risolvere il problema relativo a torch abbiamo eseguito il comando 
-"conda install pytorch torchvision cudatoolkit=10.0 -c pytorch".
+Installati CUDA 10.0 e CuDNN 7.6.5, Tensorflow si apre riconoscendo il supporto gpu ma richiede pip install scipy, pip install nets (che durante l'installazione da problemi con l'installazione di torch). 
+Per risolvere il problema relativo a torch abbiamo eseguito il comando "conda install pytorch torchvision cudatoolkit=10.0 -c pytorch".
 A questo punto abbiamo installato "Nets" tramite il comando "pip install nets". 
-Ora proviamo nuovamente il testing con il comando "python object_detection/builders/model_builder_test.py", e non abbiamo più l'errore relativo a nets ma è cambiato
-in SyntaxError.
-Abbiamo utilizzato il comando "SET PYTHONPATH=%cd%;%cd%\slim" e sembra che funzioni.
-
+Ora proviamo nuovamente il testing con il comando "python object_detection/builders/model_builder_test.py", e non abbiamo più l'errore relativo a nets ma è cambiato in SyntaxError.
+Creiamo una nuova variabile d'ambiente di tipo user (metà superiore dell'interfaccia per le variabili d'ambiente) di nome PYTHONPATH che punti a models\research e a models\research\slim, per risolvere definitivamente il SyntaxError che si presenta.
