@@ -1,2 +1,18 @@
 Entriamo nella cartella models\research\slim da cmd e immettiamo il comando "pip install -e .".
 Scarichiamo i dati sintetici utilizzati nel video con git clone https://github.com/MatthewHallberg/SyntheticDataGenerator.git
+A questo punto aggiungiamo al nostro browser google chrome l'estensione "https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf?hl=it".
+Ci siamo informati su quali sfondi fosse meglio utilizzare per generare dati sintetici
+dalla pagina "https://towardsdatascience.com/create-a-synthetic-image-dataset-the-what-the-why-and-the-how-f820e6b6f718".
+Disinstalliamo "Microsoft Visual Studio Community 2015 with Updates" e "Visual Studio Community 2019" per fare un
+po di pulizia sui nostri pc.
+Abbiamo deciso di suddividerci il lavoro di ricerca degli sfondi, quindi ognuno di
+noi ha effettutato diverse ricerche per varie categorie (es:giardino, cucina, sala ecc).
+Una volta cercata scorriamo in giù la pagina per permettere all'estensione che abbiamo
+installato prima di caricare più immagini.
+Quindi schiacciamo sull'estensione aggiunta in precedenza e clicchimao il pulsante
+"Download All Tabs". A questo punto si aprirà una nuova scheda con tutte le immagini
+che abbiamo visualizzato, e cliccando il pulsante "Download" in alto a sinistra 
+scarichiamo le immagini visualizzate. Completata questa operazione creiamo nella cartella
+"Documenti" una nuova cartella "Textures" e estraiamo tutte le foto scaricate
+in questa cartella.
+Scarichiamo Unity Hub dalla pagina "https://store.unity.com/products/unity-personal".
