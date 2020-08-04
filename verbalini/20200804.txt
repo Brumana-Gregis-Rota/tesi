@@ -1,0 +1,69 @@
+Partiamo oggi con il progetto su Unity.
+Attiviamo innanzitutto una nuova licenza per utilizzi non commerciali e poi iniziamo
+il progetto facendo "Add" e andando a selezionare la cartella "SyntheticDataGeneretor"
+clonata la lezione precedente tramite il comando "git clone" (nel mio caso il percorso
+sarà C://Utenti/Stefano). 
+Selezioniamo la versione e poi apriamo il nostro progetto.
+Una volta aperto trasciniamo dentro la cartella Resources che si trova in Assets
+la cartella Textures che abbiamo creato in precedenza. Quindi si creeranno all'interno
+di Resources 2 cartelle (Textures e Textures1); eliminiamo quella vuota e rinominiamo
+l'altra con Textures.
+A questo punto entriamo nella cartella "Scenes" e schiacciamo "Create", vedremo che
+si aprirà una schermata con un Pokemon. Scarichiamo la cartella "hand_models.zip"
+che ci è stata inviata dal prof.Ermidoro e la estraiamo in Documenti. A questo 
+punto la copiamo all'interno della cartella "3DModels" che si trova nei "Project" 
+sotto "Assets".
+All'interno della cartella estratta precedentemente "hand_models" c'è un altro zip
+("Fps Arms Pack") che estriamo all'interno di hand_models.
+All'interno di Hierarchy (finestra in alto a sinistra), eliminiamo tutti i pokemon
+in ObjectsToTrain tranne Bulbasaur. Lo copiamo e lo incolliamo sempre li per
+ottenere 4 volte Bulbasaur. A questo punto li rinominiamo nel seguente modo:
+-Bulbasaur --> Arms_PayDay_Style_No_Sleeve
+-Bulbasaur1 --> Arms_PayDay_Style_With_Sleeve
+-Bulbasaur2 --> Fps_Arms_No_Sleeve
+-Bulbasaur3 --> Fps_Arms_With_Sleeve
+Ora dobbiamo riuscire a cambiare il nostro soggetto dal Pokemon alla mano.
+Per ciascun elemento ora lo duplichiamo e aggiungiamo ad uno il suffisso "Low"
+e all'altro il suffisso "High".
+Selezioniamo quindi "Arms_PayDay_Style_No_Sleeve_Low" e nella finestra che si apre
+a destra modifichiamo il campo "Mesh" (forma dell'oggetto) selezionando la figura con percorso simile
+a "Arms_PayDay_Style_No_Sleeve_Low". Siccome la Mesh ha 2 submesh (1 braccia e 1 mani)
+dobbiamo renderle entrambe "compribili con del materiale" e quindi modifichiamo il campo
+"size" di "Materials" mettendolo a 2. Modifichiamo i 2 campi "Element" mettiamo quelli
+con percorso simile come prima. Siccome la qualità della coperatura del modello della
+mano non era ottimale abbiamo deciso di cercare in internet un nuovo modello.
+Abbiamo trovato un buon modello da questa pagina "https://free3d.com/3d-model/freerealsichand-85561.html"
+A questo punto estriamo lo zip del modello e lo copiamo in "3DModels" (in Assets-3DModels), eliminando tutti gli altri file.
+Poi entriamo nella cartella "Scenes" in "Assets".
+Cambiamo il nome dell'oggetto in ObjectsToTrain in hand (hand_1 rosso, hand_2 gregio, hand_3 teo per differenziare il dataset, infatti 
+ognuno di noi importerà un modello di mano diverso per avere un dataset più completo).
+A questo punto nella finestra di destra modifichiamo il "Mesh" scegliendo "default", mettiamo a size 1 e utilizziamo come "Element0"
+la "palla" marrone chiamata "DefaultMat". Sarebbe da aggiungere anche lo script "ObjectBounds" con la skin "CustomSkin" e lo script
+"ChangeTransform" che approfondiremo nella tesi.
+Abbiamo quindi creato il modello della nostra mano e premendo play, si vedono girare le immagini salvate con la mano.
+Quando decideremo di generare effettivamente il dataset che avremo tutto pronto, nella cartella "Scripts" dovremo modificare
+in  "TakePictures" la costante "TOTAL_IMAGES" che definisce il numero di immagini sintetiche che si andrà a creare.
+Modifichiamo ora, nel file "testDetection.py" (che si trova in "C:\Users\Stefano\SyntheticDataGenerator\TFUtils")
+modifichiamo la linea 30 mettendo: "NUM_CLASSES = 1" questo perchè abbiamo una sola mano.
+Sempre in quella cartella modifichiamo il file "ssdlite_mobilenet_v2_coco.config" mettendo anche qui "NUM_CLASSES = 1".
+Abbiamo cancellato il contenuto della cartella "UnityStuff" che si trova in "C:\Users\Stefano\SyntheticDataGenerator\Assets\StreamingAssets"
+per evitare problemi durante la generazione delle immagini.
+Problema di CUDA durante il training, su internet il problema viene attribuito a numpy, quindi disinstalliamo numpy finchè non va via
+dalla piplist e poi lo reinstalliamo.
+PARTE SULLA WEBCAM
+Facciamo una prova per testare se le nostre webcam sono compatibili con opencv.
+Quindi innanzitutto facciamo il comando "git clone https://github.com/kevinam99/capturing-images-from-webcam-using-opencv-python.git".
+Entriamo nella cartella appena creata tramite "cd capturing-images-from-webcam-using-opencv-python.git".
+Da interfaccia grafica entriamo nella cartella precedente e poi apriamo il file
+"webcam-capture-v1.01.py" e modifichiamo il campo "webcam = cv2.VideoCapture(0)"
+mettendo tra parentesi 1 (webcam = cv2.VideoCapture(1)), ma abbiamo ancora problemi.
+
+
+
+
+
+
+
+
+
+
