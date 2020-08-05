@@ -1,0 +1,34 @@
+Completiamo il lavoro fatto ieri cercando due nuovi modelli di mani per rendere
+più completo il nostro dataset. Un modello lo abbiamo trovato alla pagina
+"https://free3d.com/3d-model/rigged-hands-28855.html" e l'altra alla pagina
+"https://free3d.com/3d-model/freerealsichand-85561.html", scegliendo un altro modello
+rispetto al primo utilizzato il giorno precedente.
+Nella finestra in basso a sinistra su Unity(Project) entriamo nella cartella "Scripts",
+apriamo il file "TakePictures" e modifichiamo alla riga 9 la costante "TOTAL_IMAGES"
+mettendola a 2000, per far in modo che generi 2000 immagini ad ogni simulazione.
+A questo punto apriamo il file "testDetection.py" nella cartella "TFUtils" di "SyntheticDataGeneretor"
+e modifichiamo alla linea 30 il campo "NUM_CLASSES" assegnandogli il valore 1.
+Sempre nella stessa cartella modifichiamo il file "ssdlite_moblienet_v2_coco.config"
+alla riga 9, assegnando il valore 1 al campo "num_classes".
+Eliminiamo poi la cartella "UnityStuff" che si trova al percorso "C:\Users\Stefano\SyntheticDataGenerator\Assets\StreamingAssets\UnityStuff"
+Ora generiamo le 2000 immagini schiacciando play su Unity.
+Al termine di questa operazione troveremo il 20% delle immagini in "Test" dentro la 
+cartella "UnityStuff" che ricreerà appena faremo partire la generazione delle immagini
+e l'80% nella cartella "Train" che si trova nella stessa posizione della precedente.
+A questo punto spostiamo la cartella "UnityStuff" all'interno di "models/research".
+Apriamo il file "ObjectDetectNotes.txt" al percorso "C:\Users\Stefano\models\research\UnityStuff\TFUtils"
+e contemporaneamente apriamo la CMD entrando nell'ambiente tesi tramite il
+comando "conda activate tesi". Da cmd entriamo nella cartella "models/research" e 
+eseguiamo il comando che troviamo alla linea 12 ("protoc object_detection/protos/*.proto --python_out=.").
+Da terminale entriamo nella cartella "UnityStuff/TFUtils" e eseguiamo il comando
+"python createTFrecord.py" che troviamo alla linea 18 del file .txt aperto.
+A questo punto facciamo partire il train tramite il comando che troviamo alla linea
+21 "python ../../object_detection/legacy/train.py --pipeline_config_path=ssdlite_mobilenet_v2_coco.config --train_dir=../trainOutput/ --logtostderr"
+eseguendolo nella cartella "TFUtils". Il comando lo troviamo nela file "ObjectDetectNotes.txt"
+alla riga 66 cambiando "py" con "python" e aggiungendo un "/legacy/" tra object_detection
+e train.py.
+A questo punto verrà avviata la fase di training.
+Avendo riscontrato dei problemi nella fase di training Matteo Rota prova a disinstallare Tensorflow.
+In 2 su 3 riscontriamo problemi durante il training
+
+ 
