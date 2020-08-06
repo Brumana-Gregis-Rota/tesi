@@ -1,0 +1,57 @@
+Siccome il training funziona solamente sul PC di Brumana, decidiamo di
+inviare la cartella "UnityStuff" contenuta in "models/research" 
+di Gregis e Rota a Brumana, in quanto è l'unico a cui il training non dava 
+problemi. Quindi aggiungiamo tutto al training: 
+All'interno di "models/research" rinominiamo le 3 cartelle "UnityStuff" con:
+"UnityStuffTeo" "UnityStuffRosso" e "UnityStuffGregio". Prendiamo la cartella
+trainOutput che c'era all'interno della cartella "UnityStuffRosso" (perchè aveva
+già avviato il train) e la copiamo all'interno degli altri UnityStuff così da dividere 
+il training.
+Apriamo poi il CMD e, dopo aver attivato l'ambiente (conda activate tesi),
+ci spostiamo con "cd models/research/UnityStuffTeo/TFUutils" e eseguiamo il comando 
+"python createtfrecord.py". A questo punto eseguiamo il comando 
+"python ../../object_detection/legacy/train.py --pipeline_config_path=ssdlite_mobilenet_v2_coco.config --train_dir=../trainOutput/ --logtostderr"
+che farà partire il training della rete.
+Stessa operazione effettueremo poi con la cartella "UnityStuffGregio".
+La rete neurale sembra adattarsi bene ai nuovi file.
+Ora proviamo a "migrare" a Tensorflow2. 
+Per farlo decidiamo di utilizzare Google Colab e controllando la lista dei programmi
+già installati su Colab ("pip list") vediamo che è presente Tensorflow 2.3.0 
+Inoltre sono richiesti:
+-Python3.5 --> è presente 3.6.9.
+Innanzitutto cloniamo Tensorflow/models aggiornata alla data 6/08/2020 tramite 
+il comando "!git clone https://github.com/tensorflow/models.git".
+Per l'installazione di Tensorflow2 ci siamo basati alla pagina web:
+"https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2.md".
+Saltiamo la parte "Dcoker Installation" perchè non ci serve.
+Quindi entriamo nella cartella "models/research" e compiliamo protos tramite
+il comando : "protoc object_detection/protos/*.proto --python_out=."
+e installiamo Tensorflow Object Detection API tramite il comando:
+"cp object_detection/packages/tf2/setup.py ." e "python -m pip install ."
+Quindi testiamo l'installazione tramite 
+"python object_detection/builders/model_builder_tf2_test.py"
+Notiamo che durante la fase di test non "prende" la GPU, così, dal menù di Google
+Colab entriamo in "Runtime" poi "cambia tipo di runtime" e mettiamo "GPU". Rifacciamo
+tutte le operazioni fatte precedentemente.
+Quindi ora passiamo alla fase di training seguendo le indicazioni della pagina:
+"https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_training_and_evaluation.md"
+Dalla cartella "models/research" dobbiamo scaricare la nostra cartella "UnityStuff" utilizzando "wget".
+Mettiamo poi la cartella "trainOutput" in una cartella comune a tutti e 3 i dataset
+in modo che tutti possano utilizzare quella per trainare la rete.
+Prima di effettuare il training dobbiamo creare tfrecord, entrando in "UnityStuff/UnityStuffMatte/TFUtils"
+e eseguendo il comando "!python CreateTFrecord.py".
+Ma prima dobbiamo convertire in TF2 perchè questo codice è scritto in TF1.
+Quindi torniamo nella cartella "research" e eseguiamo il comando 
+"!tf_upgrade_v2 --intree UnityStuff_old/ --outtree UnityStuff" (rinominado UnityStuff in UnityStuff_old).
+A questo possiamo rifare il passaggio precedente per la creazione di tfrecord.
+E ora possiamo partire con la fase di training vera e propria sul dataset che abbiamo
+appena scaricato tramite il comando : 
+"python ../../../object_detection/legacy/train.py --pipeline_config_path=ssdlite_mobilenet_v2_coco.config --train_dir=../trainOutput/ --logtostderr"
+Ma abbiamo problemi.
+Quindi la soluzione con Google Colab non funziona, probabilmente questo è dovuto al fatto che
+gli script vengono eseguiti in python 3.6 anzichè in python 3.5.
+
+
+
+
+
