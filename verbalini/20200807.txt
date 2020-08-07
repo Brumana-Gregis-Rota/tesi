@@ -1,0 +1,19 @@
+Abbiamo effettuato l'inference sul PC di Brumana che stava effettuando il training
+tramite il comando:
+"python ../../object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path ssdlite_mobilenet_v2_coco.config --trained_checkpoint_prefix ../trainOutput/model.ckpt-19344 --output_directory ../finalOutput"
+Abbiamo poi testato il funzionamento della webcam tramite il comando:
+"python TestDetection.py".
+La telecamera si apre, ma non abbiamo nessun riscontro sul riconoscimento delle mani
+(ricordiamo che non abbiamo ancora terminato il train, ma ci aspettavamo riconoscesse
+qualcosa).
+Per quanto riguarda la migrazione a TF2 utilizzando Google Colab siamo giunti alla
+conclusione che non è possibile farlo in quanto ssd_mobilenet_v2 non è supportato,
+quindi utilizzeremo TF1.15
+
+PROPOSTA ABSTRACT
+Durante il lavoro di tesi è stato realizzato un generatore di dati sintetici,
+composti da un render 3D di una mano umana su un'immagine di background casuale,
+mediante Unity 3D; le immagini con label generate sono state poi
+sfruttate nel training dell'object detection API presente nei research models
+di TensorFlow, al fine di implementare un sistema per l'individuazione delle mani
+in contesto reale.
