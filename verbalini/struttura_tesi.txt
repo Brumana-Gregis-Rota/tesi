@@ -1,0 +1,10 @@
+STRUTTURA TESI:
+-Parte introduttiva --> motivare perchè abbiamo utilizzato dei dati sintetici
+			e spiegare un po' i tools utilizzati
+
+-Parte descrittiva --> come abbiamo generato il dataset
+		       come abbiamo allenato la rete
+			risultati ottenuti
+
+-Conclusioni e Sviluppi futuri --> breve riassunto del lavoro fatto
+				   illustrare gli sviluppi futuri
