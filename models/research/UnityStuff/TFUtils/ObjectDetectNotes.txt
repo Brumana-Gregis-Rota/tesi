@@ -14,3 +14,9 @@ python ../../object_detection/legacy/train.py --pipeline_config_path=ssdlite_mob
 python ../../object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path ssdlite_mobilenet_v2_coco.config --trained_checkpoint_prefix ../trainOutput/model.ckpt-????? --output_directory ../finalOutput 
 
 python testDetection.py
+
+PER I GRAFICI
+
+cd anaconda3\envs\tesi\Lib\site-packages\tensorboard
+
+python main.py --logdir=../trainOutput
