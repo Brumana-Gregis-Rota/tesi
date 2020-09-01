@@ -6,8 +6,8 @@ using UnityEngine;
 public class TakePictures : MonoBehaviour {
 
     const bool SHOW_BOXES = false;
-    const int TOTAL_IMAGES = 2000;
-    const float TEST_IMAGE_PERCENT = .2f;
+    const int TOTAL_IMAGES = 16000;
+    const float TEST_IMAGE_PERCENT = 0;
 
     int testNum;
     int imageNum = 1;
@@ -62,7 +62,7 @@ public class TakePictures : MonoBehaviour {
         }
         //create test and train folders
         testImagePath = parentPath + "/test";
-        if (!File.Exists(testImagePath)) {
+        if (!File.Exists(testImagePath) && TEST_IMAGE_PERCENT != 0) {
             Directory.CreateDirectory(testImagePath);
         }
 
@@ -74,8 +74,10 @@ public class TakePictures : MonoBehaviour {
 
     void CreateLabelFiles() {
         //create label files
-        testLabelPath = parentPath + "/test.txt";
-        File.WriteAllText(testLabelPath, "");
+        if(TEST_IMAGE_PERCENT != 0) {
+            testLabelPath = parentPath + "/test.txt";
+            File.WriteAllText(testLabelPath, "");
+        }
         trainLabelPath = parentPath + "/train.txt";
         File.WriteAllText(trainLabelPath, "");
     }
@@ -167,6 +169,7 @@ public class TakePictures : MonoBehaviour {
         photo.Apply();
         byte[] data = photo.EncodeToJPG(75);
         DestroyImmediate(photo);
+
         if (imageNum > testNum) {
             File.WriteAllBytes(trainImagePath + "/" + imageNum + ".jpg", data);
         } else {

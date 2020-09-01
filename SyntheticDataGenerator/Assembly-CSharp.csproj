@@ -83,9 +83,8 @@
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\TakePictures.cs" />
     <Compile Include="Assets\Scripts\TestRandom.cs" />
-    <None Include="Assets\StreamingAssets\UnityStuff\test.txt" />
-    <None Include="Assets\StreamingAssets\UnityStuff\TFUtils\ObjectDetectNotes.txt" />
     <None Include="Assets\StreamingAssets\UnityStuff\train.txt" />
+    <None Include="Assets\StreamingAssets\UnityStuff\TFUtils\ObjectDetectNotes.txt" />
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/rotam/Documents/tesi/SyntheticDataGenerator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>

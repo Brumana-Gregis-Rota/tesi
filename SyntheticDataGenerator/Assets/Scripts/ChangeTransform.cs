@@ -2,7 +2,10 @@
 
 public class ChangeTransform : MonoBehaviour, IChangeable {
 
-    const int MAX_ANGLE = 20;
+    //modificato da 20 a 180 di modo da avere anche il dorso della mano nelle immagini generate. L'autore del generatore dice che oltre i 20° le performance cominciano a diventare scarse per quanto riguarda i Pokémon.
+    //const int MAX_ANGLE = 20;
+    const int MAX_ANGLE = 180;
+
 
     Vector3 startPosition;
     Vector3 startAngle;
