@@ -4,13 +4,14 @@ public class MeshUtility : MonoBehaviour {
 
     public static Mesh GetMesh(Transform transform) {
         //return mesh from either skinned mesh renderer or mesh filter
-        SkinnedMeshRenderer skinnedRend = transform.GetComponentInChildren<SkinnedMeshRenderer>();
+        //SkinnedMeshRenderer skinnedRend = transform.GetComponentInChildren<SkinnedMeshRenderer>();
         MeshFilter meshFilter = transform.GetComponentInChildren<MeshFilter>();
-        return skinnedRend != null ? skinnedRend.sharedMesh : meshFilter.mesh;
+        return meshFilter.mesh;
+        //return skinnedRend != null ? skinnedRend.sharedMesh : meshFilter.mesh;
     }
 
-    public static void SetMesh(Transform desiredTrans, Mesh mesh) {
-        //return mesh from either skinned mesh renderer or mesh filter
+    /*public static void SetMesh(Transform desiredTrans, Mesh mesh) {
+        return mesh from either skinned mesh renderer or mesh filter
         SkinnedMeshRenderer skinnedRend = desiredTrans.GetComponentInChildren<SkinnedMeshRenderer>();
         MeshFilter meshFilter = desiredTrans.GetComponentInChildren<MeshFilter>();
         if (skinnedRend != null) skinnedRend.sharedMesh = mesh;
@@ -37,5 +38,5 @@ public class MeshUtility : MonoBehaviour {
         };
 
         return clonedMesh;
-    }
+    }*/
 }

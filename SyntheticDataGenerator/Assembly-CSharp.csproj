@@ -64,14 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ChangeAmbient.cs" />
-    <Compile Include="Assets\Scripts\ChangeCamera.cs" />
-    <Compile Include="Assets\Scripts\ChangeColor.cs" />
-    <Compile Include="Assets\Scripts\ChangeLight.cs" />
-    <Compile Include="Assets\Scripts\ChangeMesh.cs" />
-    <Compile Include="Assets\Scripts\ChangePose.cs" />
-    <Compile Include="Assets\Scripts\ChangePoseByValue.cs" />
     <Compile Include="Assets\Scripts\ChangeTexture.cs" />
-    <Compile Include="Assets\Scripts\ChangeToon.cs" />
     <Compile Include="Assets\Scripts\ChangeTransform.cs" />
     <Compile Include="Assets\Scripts\ChangeWindow.cs" />
     <Compile Include="Assets\Scripts\CollisionBehavior.cs" />
@@ -82,7 +75,6 @@
     <Compile Include="Assets\Scripts\RandoTextures.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\TakePictures.cs" />
-    <Compile Include="Assets\Scripts\TestRandom.cs" />
     <None Include="Assets\StreamingAssets\UnityStuff\train.txt" />
     <None Include="Assets\StreamingAssets\UnityStuff\TFUtils\ObjectDetectNotes.txt" />
     <Reference Include="Unity.VSCode.Editor">
