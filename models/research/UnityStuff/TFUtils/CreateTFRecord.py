@@ -66,7 +66,7 @@ def read_file(type):
 
 def main(_):
     read_file("train")
-    read_file("test")
+    #read_file("test")
 
 if __name__ == '__main__':
     tf.app.run()
