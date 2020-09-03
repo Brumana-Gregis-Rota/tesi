@@ -1,0 +1,2 @@
+struttura cartella progetto Unity - https://learn.unity.com/tutorial/project-architecture-unity-project-folder-structure?tab=overview#5c7f8528edbc2a002053b672
+cosa sono i package in Unity - https://docs.unity3d.com/Packages/com.unity.package-manager-ui@1.8/manual/index.html
