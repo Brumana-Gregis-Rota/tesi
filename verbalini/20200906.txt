@@ -1,0 +1,4 @@
+Il nuovo dataset si rivela inefficace:
+- azzeramento training e riesumazione vecchio dataset;
+- rimozione nuove immagini da sdg/assets/textures;
+- (DA FARE) cambio script;
