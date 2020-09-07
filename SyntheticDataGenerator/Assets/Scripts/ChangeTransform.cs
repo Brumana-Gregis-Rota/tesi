@@ -1,11 +1,10 @@
-﻿using UnityEngine;
+﻿// importazione variabili d'ambiente Unity
+using UnityEngine;
 
-public class ChangeTransform : MonoBehaviour, IChangeable {
-
-    //modificato da 20 a 180 di modo da avere anche il dorso della mano nelle immagini generate. L'autore del generatore dice che oltre i 20° le performance cominciano a diventare scarse per quanto riguarda i Pokémon.
-    //const int MAX_ANGLE = 20;
-    const int MAX_ANGLE = 180;
-
+// questa classe sarà assegnata a ObjectsToTrain -> hand e cambierà la sua posizione e la sua rotazione ogni volta che verrà invocato il suo metodo ChangeRandom()
+    public class ChangeTransform : MonoBehaviour, IChangeable {
+    // la rotazione sarà al massimo di 20°. È stata ricercata una rotazione maggiore, di modo da avere anche il dorso della mano visibile nel dataset, ma i risultati non sono stati quelli previsti
+    const int MAX_ANGLE = 20;
 
     Vector3 startPosition;
     Vector3 startAngle;
@@ -15,13 +14,13 @@ public class ChangeTransform : MonoBehaviour, IChangeable {
         startAngle = transform.localEulerAngles;
     }
 
+    // realizzazione ChangeRandom(), obbligata dall'implementazione di IChangeable, che cambia rotazione e posizione dell'oggetto al quale lo script è legato, mantenendolo comunque all'interno della futura immagine
     public void ChangeRandom() {
-
-        //choose random position on screen (these numbers are not 1 -0 because the origin of my models was not in the center and I never change it)
+        // cambio posizione in maniera randomica ma entro range di valori che assicurino la visibilità della mano
         Vector3 randScreenPos = new Vector3(Random.Range(.1f, .9f), Random.Range(.6f, .9f), startPosition.z + Random.Range(.5f, 4.5f));
         transform.position = Camera.main.ViewportToWorldPoint(randScreenPos);
 
-        //handle random rotation
+        // cambio rotazione
         Vector3 randAngle;
         randAngle.x = startAngle.x + Random.Range(-MAX_ANGLE, MAX_ANGLE);
         randAngle.y = startAngle.y + Random.Range(-MAX_ANGLE, MAX_ANGLE);
