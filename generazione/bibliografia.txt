@@ -1,3 +1,5 @@
-struttura cartella progetto Unity - https://learn.unity.com/tutorial/project-architecture-unity-project-folder-structure
-tipi di modello 3D supportati da Unity - https://docs.unity3d.com/2019.2/Documentation/Manual/3D-formats.html
+cose generiche Unity - https://docs.unity3d.com/2019.2/Documentation/Manual/
 mesh render mano - https://it.wikipedia.org/wiki/Mesh_poligonale
+cos'è singleton - https://it.wikipedia.org/wiki/Singleton_(informatica)
+"Design Patterns" - https://it.wikipedia.org/wiki/Design_Patterns
+cos'è Linq - https://docs.microsoft.com/it-it/dotnet/api/system.linq?view=netcore-3.1
