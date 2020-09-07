@@ -1,0 +1,1 @@
+Cambiamento rotazione mano durante la generazione e cambiamento scala, portata a 0.75 per avere una via di mezzo.
