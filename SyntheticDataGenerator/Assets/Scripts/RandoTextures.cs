@@ -1,9 +1,7 @@
 ﻿// importazione variabili d'ambiente Unity
 using UnityEngine;
-
 // questa classe, singleton, fungerà da tool per ChangeTexture.cs, fornendogli immagini provenienti da Assets/Resources/Textures
 public class RandoTextures : Singleton<RandoTextures> {
-
     Object[] textures;
     int texNum;
     // override della funzione Awake() di Singleton, ne ripropone completamente il comportamento, aggiungendo una chiamata alla funzione Shuffle passando come parametro la cartella Textures presente in Resources

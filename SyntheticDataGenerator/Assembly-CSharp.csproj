@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\ChangeTexture.cs" />
     <Compile Include="Assets\Scripts\ChangeTransform.cs" />
     <Compile Include="Assets\Scripts\ChangeWindow.cs" />
-    <Compile Include="Assets\Scripts\CollisionBehavior.cs" />
     <Compile Include="Assets\Scripts\IChangeable.cs" />
     <Compile Include="Assets\Scripts\MeshUtility.cs" />
     <Compile Include="Assets\Scripts\ObjectBounds.cs" />
@@ -75,8 +74,6 @@
     <Compile Include="Assets\Scripts\RandoTextures.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\TakePictures.cs" />
-    <None Include="Assets\StreamingAssets\UnityStuff\train.txt" />
-    <None Include="Assets\StreamingAssets\UnityStuff\TFUtils\ObjectDetectNotes.txt" />
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/rotam/Documents/tesi/SyntheticDataGenerator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
