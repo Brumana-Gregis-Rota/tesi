@@ -1,6 +1,5 @@
 ﻿// importazione variabili d'ambiente Unity
 using UnityEngine;
-
 // questa classe sarà assegnata a ObjectsToTrain -> hand e cambierà la sua posizione e la sua rotazione ogni volta che verrà invocato il suo metodo ChangeRandom()
     public class ChangeTransform : MonoBehaviour, IChangeable {
     // la rotazione sarà al massimo di 20°. È stata ricercata una rotazione maggiore, di modo da avere anche il dorso della mano visibile nel dataset, ma i risultati non sono stati quelli previsti

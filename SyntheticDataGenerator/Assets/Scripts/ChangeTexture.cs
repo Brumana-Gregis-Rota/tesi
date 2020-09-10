@@ -5,7 +5,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(RawImage))]
 // questa classe sarà assegnata a Main Camera -> Canvas -> Image e servirà a cambiare l'immagine di sfondo dell'immagine che verrà generata. Senza lo script RandoTextures.cs 
 public class ChangeTexture : MonoBehaviour, IChangeable {
-
     RawImage backgroundImage;
     
     void Start() {
