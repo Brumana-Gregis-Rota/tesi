@@ -5,8 +5,8 @@ using System.IO;
 using UnityEngine;
 // questa classe predispone la cartella UnityStuff con le cartelle train e TFUtils e i files train.txt e labelmap.pbtxt e procede con la generazione e la memorizzazione di immagini, sfruttando ogni script contenuto nella cartella Scripts
 public class TakePictures : MonoBehaviour {
-    const bool SHOW_BOXES = false;
-    const int TOTAL_IMAGES = 2;
+    const bool SHOW_BOXES = true;
+    const int TOTAL_IMAGES = 15;
 
     int imageNum = 1;
     string parentPath;
