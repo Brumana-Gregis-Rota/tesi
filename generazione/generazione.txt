@@ -1,0 +1,5 @@
+cose generiche Unity - https://docs.unity3d.com/2019.2/Documentation/Manual/
+mesh render mano - https://it.wikipedia.org/wiki/Mesh_poligonale
+cos'è singleton - https://it.wikipedia.org/wiki/Singleton_(informatica)
+"Design Patterns" - https://it.wikipedia.org/wiki/Design_Patterns
+vari import Sytstem.?? - https://docs.microsoft.com/it-it/dotnet/api/system.collections?view=netcore-3.1
