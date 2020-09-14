@@ -1,3 +1,0 @@
-Apprendimento supervisionato - https://it.wikipedia.org/wiki/Apprendimento_supervisionato
-Grafico e concetti intorduttivi - Corso di ingegneria dei sistemi di controllo di Ermidoro MIchele
-concetti relativi a ssdlite_mobilenet_v2_coco - https://machinethink.net/blog/mobilenet-ssdlite-coreml
