@@ -1,6 +1,0 @@
-INTRODUZIONE : https://www.paolobenanti.com/post/2018/05/22/synthetic-data-democratizzare-il-machine-learning
-GitHub: https://gist.github.com/tesseslol/da62aabec74c4fed889ea39c95efc6cc
-Unity: https://www.html.it/pag/42791/unity-introduzione-e-filosofia/
-Scene Unity: https://www.html.it/pag/42816/scene-view-e-navigazione-nella-scena/
-Tensorflow: https://medium.com/@micheleberardi/che-cos%C3%A8-tensorflow-8caf85c59868
-	    https://medium.com/@cosimo.iaia/machine-learning-tensorflow-per-luomo-di-strada-2c71a948b4e3
